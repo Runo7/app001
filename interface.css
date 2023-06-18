@@ -1,0 +1,63 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0.1;
+  padding: 0 1rem;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.logo {  
+  width: 100px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+}
+
+.button-container button {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 250px;
+}
+
+.button-container button a {
+  color: inherit; /* Behält die Schriftfarbe des Buttons bei */
+  text-decoration: none; /* Entfernt den Unterstrich */
+}
+
+.button-container button:hover {
+  background-color: #0056b3;
+}
+
+@media screen and (max-width: 768px) {
+  .logo {
+    margin-top: 0.5rem;
+    margin-left: 1.5rem;
+  }
+  
+  .button-container {
+    height: auto;
+  }
+  
+  .button-container button {
+    width: 80%;
+  }
+}

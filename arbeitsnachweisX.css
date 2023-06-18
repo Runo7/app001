@@ -1,0 +1,183 @@
+/* Allgemeine Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0.1;
+  padding: 0 1rem;
+}
+
+/* Header */
+#container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Vertikal zentrieren */
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+#logo {
+  display: block;
+  width: 100px;
+}
+
+#firmenname,
+#strasse,
+#stadt,
+#kundenname,
+#kundenstrasse,
+#kundenstadt {
+  margin-bottom: 10px;
+}
+
+/* Zusätzlicher Stil für den Home-Button */
+.custom-button2 {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: absolute; /* Fügt eine absolute Position hinzu */
+  top: 10px; /* Platziert den Button oben */
+  right: 10px; /* Platziert den Button rechts */
+  text-decoration: none;
+}
+
+.custom-button2:hover {
+  background-color: #2980b9;
+}
+
+/* Zusätzlicher Stil für den Home-Button und Reset-Button */
+.custom-button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  float: right; /* Platziert den Button rechts */
+  margin-top: 10px; /* Fügt einen oberen Abstand hinzu */
+  margin-left: 1rem;
+  margin-bottom: 2rem;
+}
+
+.custom-button:hover {
+  background-color: #2980b9;
+}
+
+/* Dropdown-Stil */
+.custom-select {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.custom-select select {
+  display: none; /* Die ursprüngliche Dropdown-Liste ausblenden */
+}
+
+/* Stil für die benutzerdefinierte Dropdown-Anzeige */
+.custom-select .select-selected {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+/* Pfeil nach unten für die Dropdown-Anzeige */
+.custom-select .select-selected::after {
+  content: "";
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em;
+  border-bottom: 2px solid #999;
+  border-right: 2px solid #999;
+  transform: rotate(45deg);
+  margin-left: 5px;
+}
+
+/* Stil für die Dropdown-Optionen */
+.custom-select .select-items {
+  position: absolute;
+  background-color: #fff;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 4px;
+  z-index: 9999;
+}
+
+.custom-select .select-items div {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.custom-select .select-items div:hover {
+  background-color: #f1f1f1;
+}
+
+/* Zeige die Dropdown-Optionen, wenn die Dropdown-Anzeige angeklickt wird */
+.custom-select.open .select-items {
+  display: block;
+}
+
+/* St
+
+
+/* Formularabschnitte */
+#objekt-section,
+#mieter-section,
+#auftrag-section,
+#material-section,
+#massnahme-section,
+#monteur-section,
+#kunde-section {
+  margin-bottom: 1rem;
+}
+
+/* Eingabefelder */
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid rgb(202, 202, 202);
+  border-radius: 4px;
+}
+
+textarea {
+  height: 100px;
+}
+
+/* Responsives Design */
+@media screen and (max-width: 768px) {
+  #container {
+    flex-direction: column;
+    align-items: flex-start; /* Links ausrichten */
+  }
+
+  #logo {
+    margin-bottom: 1rem;
+  }
+
+  #firmenname {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #firmenname {
+    font-size: 1.2rem;
+  }
+}
+
+#signature-canvas {
+  border: 1px solid #ccc;
+}

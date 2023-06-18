@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Meine Firma</title>
+  <link rel="stylesheet" href="arbeitsnachweis.css">
+</head>
+<body>
+    <div id="container">
+      <div>
+        <img id="logo" src="logoPB.jpg" alt="Firmenlogo">
+        <h1 id="firmenname">Plumber Berlin</h1>
+        <p id="strasse">Eisenacher Straße 64</p>
+        <p id="stadt">10483 Berlin</p>
+      </div>
+     
+    </div>
+    
+    
+      <label for="objekt-textfeld" id="objekt-label">Objekt:</label>
+      <input type="text" id="objekt-textfeld">
+    
+    
+    
+      <label for="mieter-textfeld" id="mieter-label">Mieter:</label>
+      <input type="text" id="mieter-textfeld">
+   
+    
+      <div id="auftrag-section">
+        <label for="auftrag-textfeld" id="auftrag-label">Auftrag:</label>
+        <input type="text" id="auftrag-textfeld">
+        <select id="auftrag-auswahl" onchange="updateTextFields()">
+          <option value="Reparatur Absperrventil">Reparatur Absperrventil</option>
+          <option value="Austausch Spülkasten">Austausch Spülkasten</option>
+          <option value="Austausch Armatur">Austausch Armatur</option>
+          <option value="Austausch Waschbecken">Austausch Waschbecken</option>
+          <option value="Austausch Duschtasse">Austausch Duschtasse</option>
+          <option value="Austausch Badewanne">Austausch Badewanne</option>
+          <option value="Austausch WC">Austausch WC</option>
+          <option value="Austausch Geruchsverschluss">Austausch Geruchsverschluss</option>
+          <option value="Austausch Heizkörper">Austausch Heizkörper</option>
+          <option value="Austausch Thermostatkopf">Austausch Thermostatkopf</option>
+          <option value="Austausch Gastherme">Austausch Gastherme</option>
+          <option value="Austausch Eckventil">Austausch Eckventil</option>
+          <option value="Austausch Absperrventil">Austausch Absperrventil</option>
+          <option value="Austausch Heizkessel">Austausch Heizkessel</option>
+          <option value="Austausch Zähler">Austausch Wasserzähler</option>
+        </select>
+      </div>
+      <hr>
+    
+      <label for="material-textfeld" id="material-label">Verbrauchtes Material:</label>
+      <input type="text" id="material-textfeld">
+    
+    
+  
+      <label for="massnahme-textfeld" id="massnahme-label">Arbeitsmaßnahme:</label>
+      <textarea id="massnahme-textfeld"></textarea>
+ 
+    
+    <div id="monteur-section">
+      <label for="monteur-textfeld" id="monteur-label">Monteur:</label>
+      <input type="text" id="monteur-textfeld">
+    </div>
+    
+    <div id="kunde-section">
+      <label for="kunde-textfeld" id="kunde-label">Kunde oder Mieter:</label>
+      <input type="text" id="kunde-textfeld">
+    </div>
+
+    <script>
+       function updateTextFields() {
+          var selectedOption = document.getElementById("auftrag-auswahl").value;
+              document.getElementById("auftrag-textfeld").value = selectedOption;
+
+            if (selectedOption === "Reparatur Absperrventil") {
+              document.getElementById("material-textfeld").value = "Oberteil und Griff jeweils 1 Stk.";
+              document.getElementById("massnahme-textfeld").value = "Absperrung des betroffenen Strangs, Demontage Absperrventil, Montage neues Ventil";
+              document.getElementById("monteur-textfeld").value = "Onur D.";
+              document.getElementById("auftrag-textfeld").value = "Austausch Absperrventil";
+              } else {
+                document.getElementById("material-textfeld").value = "";
+                 document.getElementById("massnahme-textfeld").value = "";
+                 document.getElementById("monteur-textfeld").value = "";
+             }
+}
+
+    </script>
+</body>
+</html>

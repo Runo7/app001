@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arbeitsnachweis</title>
+  <link rel="stylesheet" href="arbeitsnachweisX.css">
+</head>
+<body>
+  <div id="container">
+    <img src="logoPB.jpg" alt="Firmenlogo" id="logo">
+    <div>
+      <a href="index.html" class="custom-button2" id="home-button">Home</a>
+    </div>
+  </div>
+
+  <h1>Arbeitsnachweis</h1>
+
+  <form id="arbeitsnachweis-formular">
+    <div id="objekt-section">
+      <label for="objekt-textfeld" id="objekt-label">Objekt:</label>
+      <input type="text" id="objekt-textfeld" placeholder="Objektname">
+    </div>
+
+    <div id="mieter-section">
+      <label for="mieter-textfeld" id="mieter-label">Mieter:</label>
+      <input type="text" id="mieter-textfeld" placeholder="Mietername">
+    </div>
+
+    <div id="auftrag-section">
+      <label for="auftrag-textfeld" id="auftrag-label">Auftrag:</label>
+      <div class="input-dropdown">
+        <textarea id="auftrag-textfeld" placeholder="Auftragsbeschreibung"></textarea>
+        <select>
+          <option value="auswahl">Auswahl</option>
+          <option value="reperatur-absperrventil">Reparatur Absperrventil</option>
+          <option value="austausch-waschbecken">Austausch Waschbecken</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="material-section">
+      <label for="material-textfeld" id="material-label">Material:</label>
+      <textarea id="material-textfeld" placeholder="Verwendete Materialien"></textarea>
+    </div>
+
+    <div id="massnahme-section">
+      <label for="massnahme-textfeld" id="massnahme-label">Maßnahme:</label>
+      <textarea id="massnahme-textfeld" placeholder="Durchgeführte Maßnahmen"></textarea>
+    </div>
+
+    <div id="monteur-section">
+      <label for="monteur-textfeld" id="monteur-label">Monteur:</label>
+      <input type="text" id="monteur-textfeld" placeholder="Monteurname">
+    </div>
+
+    <div id="kunde-section">
+      <label for="kunde-textfeld" id="kunde-label">Kunde oder Mieter:</label>
+      <canvas id="signature-canvas"></canvas>
+      <button class="custom-button" id="reset-button">Reset</button>
+      <br>
+      <button class="custom-button" id="save-button">Speichern</button>
+    </div>
+  </form>
+
+  <script src="arbeitsnachweisX.js"></script>
+  <script src="arbeitsnachweis2.js"></script>
+  <script src="arbeitsnachweis3.js"></script>
+</body>
+</html>
